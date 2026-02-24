@@ -40,7 +40,7 @@ const App = () => {
       <Title>{lastPhoto.title}</Title>
       <URL>{lastPhoto.url}</URL>
       <ThumbnailURL>{lastPhoto.thumbnailUrl}</ThumbnailURL>
-      <TouchableOpacity onPress={() => onTap()}>
+      <TouchableOpacity onPress={() => onTap()} style={styles.button}>
         <Text>Add</Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -79,6 +79,10 @@ onTap = () => {
 }
 
 const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#e55381',
+    padding: 10,
+  },
   container: {
     alignItems: 'center',
     flex: 1,
